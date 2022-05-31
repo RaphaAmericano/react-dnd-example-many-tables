@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import axios from 'axios';
 import uuid from "uuid/v4";
 
 const itemsFromBackend = [
@@ -67,9 +68,58 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 function App() {
-  const [columns, setColumns] = useState(columnsFromBackend);
+  const [items, setItems] = useState([])
+
+  const initialColumns = {
+    [uuid()]: {
+      name: "Requested",
+      items: items
+    },
+    [uuid()]: {
+      name: "To do",
+      items: []
+    },
+    [uuid()]: {
+      name: "In Progress",
+      items: []
+    },
+    [uuid()]: {
+      name: "Done",
+      items: []
+    }
+  };
+
+  const [columns, setColumns] = useState(initialColumns);
+
+  const findKey = (columns) => {
+    return Object.keys(columns).find((key) => columns[key].name === "Requested"); 
+  }
+  
+  const save = () => {
+    console.log(columns)
+  }
+
+  useEffect(() => {
+    axios('https://crud-sebrae.herokuapp.com/cadastros')
+      .then(({ data }) => {
+        const items = data.map((item) => ({id: uuid(), content: item.name}))
+        setItems(items)
+        setColumns(prev => {
+          const newState = {...prev}
+          newState[findKey(prev)].items = items;
+          return newState;
+        })
+      })
+      .catch(console.warn)
+  },[])
+
+  useEffect(() => {
+    console.log(columns)
+  },[columns])
+
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
+      <button onClick={save}>Salvar</button>
       <DragDropContext
         onDragEnd={result => onDragEnd(result, columns, setColumns)}
       >
