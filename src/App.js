@@ -11,24 +11,24 @@ const itemsFromBackend = [
   { id: uuid(), content: "Fifth task" }
 ];
 
-const columnsFromBackend = {
-  [uuid()]: {
-    name: "Requested",
-    items: itemsFromBackend
-  },
-  [uuid()]: {
-    name: "To do",
-    items: []
-  },
-  [uuid()]: {
-    name: "In Progress",
-    items: []
-  },
-  [uuid()]: {
-    name: "Done",
-    items: []
-  }
-};
+// const columnsFromBackend = {
+//   [uuid()]: {
+//     name: "Requested",
+//     items: itemsFromBackend
+//   },
+//   [uuid()]: {
+//     name: "To do",
+//     items: []
+//   },
+//   [uuid()]: {
+//     name: "In Progress",
+//     items: []
+//   },
+//   [uuid()]: {
+//     name: "Done",
+//     items: []
+//   }
+// };
 
 const onDragEnd = (result, columns, setColumns) => {
   if (!result.destination) return;
