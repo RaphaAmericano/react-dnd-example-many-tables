@@ -3,13 +3,13 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import axios from 'axios';
 import uuid from "uuid/v4";
 
-const itemsFromBackend = [
-  { id: uuid(), content: "First task" },
-  { id: uuid(), content: "Second task" },
-  { id: uuid(), content: "Third task" },
-  { id: uuid(), content: "Fourth task" },
-  { id: uuid(), content: "Fifth task" }
-];
+// const itemsFromBackend = [
+//   { id: uuid(), content: "First task" },
+//   { id: uuid(), content: "Second task" },
+//   { id: uuid(), content: "Third task" },
+//   { id: uuid(), content: "Fourth task" },
+//   { id: uuid(), content: "Fifth task" }
+// ];
 
 // const columnsFromBackend = {
 //   [uuid()]: {
