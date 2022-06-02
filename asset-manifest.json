@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/react-dnd-example-many-tables/static/js/main.2de87de1.chunk.js",
+    "main.js.map": "/react-dnd-example-many-tables/static/js/main.2de87de1.chunk.js.map",
+    "runtime~main.js": "/react-dnd-example-many-tables/static/js/runtime~main.b07dec2b.js",
+    "runtime~main.js.map": "/react-dnd-example-many-tables/static/js/runtime~main.b07dec2b.js.map",
+    "static/js/2.b6512189.chunk.js": "/react-dnd-example-many-tables/static/js/2.b6512189.chunk.js",
+    "static/js/2.b6512189.chunk.js.map": "/react-dnd-example-many-tables/static/js/2.b6512189.chunk.js.map",
+    "index.html": "/react-dnd-example-many-tables/index.html",
+    "precache-manifest.feab85dfe57c054bedf8115ef36f43bf.js": "/react-dnd-example-many-tables/precache-manifest.feab85dfe57c054bedf8115ef36f43bf.js",
+    "service-worker.js": "/react-dnd-example-many-tables/service-worker.js"
+  }
+}
