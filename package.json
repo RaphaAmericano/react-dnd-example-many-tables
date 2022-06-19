@@ -1,11 +1,13 @@
 {
   "name": "react-dnd-example-many-tables",
+  "homepage": "https://raphaamericano.github.io/react-dnd-example-many-tables",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "axios": "^0.27.2",
+    "gh-pages": "^4.0.0",
     "react": "16.12.0",
     "react-beautiful-dnd": "12.2.0",
     "react-dom": "16.12.0",
@@ -19,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "rules": {
     "react/jsx-uses-react": "off",
